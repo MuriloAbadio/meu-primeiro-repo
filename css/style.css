@@ -1,0 +1,314 @@
+/* =========================================================
+   TEMPLATE BASE — PROJETO VIVA SUA PROFISSÃO
+   Tema: Motorsport Engineer (Preto & Vermelho)
+   ========================================================= */
+
+:root {
+  --cor-primaria: #dc2626;        /* Vermelho principal */
+  --cor-primaria-escura: #991b1b; /* Vermelho escuro */
+  --cor-destaque: #ef4444;        /* Vermelho vivo para detalhes */
+  --cor-fundo: #0a0a0a;           /* Preto principal */
+  --cor-fundo-suave: #141414;     /* Cinza/preto suave */
+  --cor-card: #18181b;            /* Fundo dos cartões */
+  --cor-texto: #f4f4f5;           /* Texto claro */
+  --cor-texto-suave: #a1a1aa;     /* Texto secundário */
+  --cor-borda: #27272a;           /* Borda discreta */
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho e Navegação */
+.topo {
+  background-color: #050505;
+  color: #ffffff;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.topo .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--cor-primaria);
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  color: #e4e4e7;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+/* Hero (Banner Inicial — único gradiente suave) */
+.hero {
+  background: linear-gradient(135deg, #09090b 0%, #450a0a 100%);
+  color: #ffffff;
+  padding: 60px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.etiqueta {
+  display: inline-block;
+  background-color: rgba(220, 38, 38, 0.2);
+  border: 1px solid var(--cor-primaria);
+  color: #fca5a5;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.card .etiqueta {
+  background-color: rgba(220, 38, 38, 0.16);
+  color: #f87171;
+}
+
+.hero h1 {
+  font-size: 2.1rem;
+  margin-bottom: 14px;
+  max-width: 720px;
+}
+
+.hero p {
+  font-size: 1.08rem;
+  max-width: 680px;
+  margin-bottom: 24px;
+  color: #e4e4e7;
+}
+
+.botoes-hero {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 11px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primario {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.btn-primario:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+.secao .btn-primario,
+.card .btn-primario {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.btn-secundario {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid var(--cor-primaria);
+}
+
+.btn-secundario:hover {
+  background-color: rgba(220, 38, 38, 0.15);
+}
+
+/* Cabeçalho das Páginas Internas */
+.cabecalho-pagina {
+  background-color: var(--cor-fundo-suave);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho-pagina h1 {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.cabecalho-pagina p {
+  color: var(--cor-texto-suave);
+}
+
+/* Seções e Grids */
+.secao {
+  padding: 48px 0;
+}
+
+.secao-cinza {
+  background-color: var(--cor-fundo-suave);
+}
+
+.secao-destaque {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  border-top: 2px solid var(--cor-primaria);
+  border-bottom: 2px solid var(--cor-primaria);
+}
+
+.secao-destaque p {
+  max-width: 640px;
+  margin: 10px auto 22px;
+  color: var(--cor-texto-suave);
+}
+
+.secao h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.secao-destaque h2 {
+  color: #ffffff;
+}
+
+.subtitulo {
+  color: var(--cor-texto-suave);
+  margin-bottom: 24px;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.grid-duas-colunas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.card h2,
+.card h3 {
+  color: #f87171;
+  margin-bottom: 10px;
+}
+
+.card p + p {
+  margin-top: 10px;
+}
+
+.lista-simples {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.lista-simples li {
+  margin-bottom: 8px;
+}
+
+/* Caixa reservada para Banner */
+.caixa-banner {
+  border: 2px dashed var(--cor-primaria);
+  background-color: var(--cor-card);
+  border-radius: 10px;
+  padding: 48px 20px;
+  text-align: center;
+  color: var(--cor-texto-suave);
+}
+
+.caixa-banner img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Formulário simulado da Landing Page */
+.form-simulado {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.form-simulado label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-simulado input {
+  padding: 10px;
+  border: 1px solid var(--cor-borda);
+  background-color: #09090b;
+  color: #ffffff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: #050505;
+  color: #a1a1aa;
+  text-align: center;
+  padding: 24px 0;
+  font-size: 0.9rem;
+  border-top: 1px solid var(--cor-borda);
+}
+
+.rodape .creditos {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #71717a;
+}
