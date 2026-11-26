@@ -1,0 +1,3 @@
+User-agent*
+allow:/
+Sitemap:https://muriloabadio.github.io/meu-primeiro-repo.io/sitemap.xml
