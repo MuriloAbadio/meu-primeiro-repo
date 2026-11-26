@@ -312,3 +312,10 @@ body {
   font-size: 0.85rem;
   color: #71717a;
 }
+
+/* Imagem de fundo do Hero (página inicial) */
+.hero-com-imagem {
+  background:
+    linear-gradient(135deg, rgba(9, 9, 11, 0.88) 0%, rgba(69, 10, 10, 0.72) 100%),
+    url("../exemplo.webp") center / cover no-repeat;
+}
